@@ -1,0 +1,363 @@
+/*´Reset CSS´*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*
+selector {
+    propiedad: valor;
+}
+
+
+selector de clase
+html class="palabraClave"
+css .palabraClave {        }
+
+
+selector identificador unico
+html id="palabraClave"
+css #palabraClave {        }
+
+*/
+
+
+
+
+
+/* ------- Box Model -------- */
+.boxModel {
+    
+    border: 0px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+
+.boxModel img {
+    margin: 0px;
+    padding: 30px 20px;
+    border: 1px solid rgb(255, 255, 255);
+  
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+  }
+
+
+
+/* ------- HEADER -------- */
+
+#fondoHeader {
+    background-color: white;
+    padding: 20px 40px;
+}
+
+/* Bootstrap container en columna */
+#fondoHeader .container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* ------- Logo -------- */
+
+.logo {
+    width: 200px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* ------- Nav -------- */
+
+/* Ul de Bootstrap */
+.navbar-nav {
+    display: flex;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Links */
+.nav-link {
+    text-decoration: none;
+    color: #760D46;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+.nav-link:hover {
+    color: #ffCDF2;
+}
+
+/* Quitar estilos default */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* ------- RESPONSIVE -------- */
+
+/* En mobile vuelve a fila */
+@media (max-width: 991px) {
+    #fondoHeader .container-fluid {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin: 0;
+        width: 160px;
+    }
+
+    .navbar-nav {
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/* ------- BANNER -------- */
+#banner img {
+  object-fit: cover;
+  height: 85vh;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #e609b6;
+  border-radius: 0%;
+  width: 30px;
+  height: 30px;
+}
+
+
+.carousel-indicators [data-bs-target] {
+  background-color: #e609b6;
+}
+
+.carousel-indicators .active {
+  background-color: #6b0746;
+}
+
+
+
+/* ------- FOOTER -------- */
+
+.footer {
+  background-color: #ecc9ec;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.newsletter {
+  margin-bottom: 30px;
+}
+
+.newsletter p {
+  margin-bottom: 10px;
+  font-size: 20px;
+    
+}
+
+.newsletter input {
+  padding: 10px 12px;
+  width: 560px;
+  border: 1px solid #ecc9ec;
+  border-radius: 4px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 500px;
+}
+
+
+.footer-links a {
+  text-decoration: none;
+  color: rgb(145, 9, 150);
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.suscripcion-newsletter {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* ------- FlexBox -------- */ 
+
+/* CONTENIDO PRINCIPAL */
+.mainContent {
+  padding: 60px 40px;
+}
+
+
+/* ------- CARDS OFERTA -------- */
+.ofertasSeccion {
+  margin-bottom: 100px;
+  text-align: center; /* centra el h2 */
+}
+
+.ofertasContainer {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+/* CONTENEDOR DE CADA OFERTA */
+.oferta {
+  position: relative; /* referencia para el botón */
+}
+
+.oferta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* SECCIÓN DE PRODUCTOS */
+.nuevoSeccion {
+  margin-bottom: 100px;
+  text-align: center; /* centra el h2 */
+}
+
+h5.descripcionNuevo {
+  font-size: 14px;
+  color: #6b0746;
+}
+
+
+/* IMAGEN */
+.oferta img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 0px;
+  display: block;
+}
+
+/* BOTÓN SOBRE LA IMAGEN */
+.oferta button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 10px 20px;
+  background-color: #d63384;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.oferta button:hover {
+  background-color: #b82d6f;
+  
+}
+.oferta button {
+  opacity: 0;
+}
+
+.oferta:hover button {
+  opacity: 1;
+}
+
+
+/* TÍTULO DE SECCIÓN */
+.descripcionCards {
+  font-size: 34px;
+  font-family: 'Playfair Display', Montserrat, sans-serif;
+  color: rgb(145, 9, 150);
+  margin-bottom: 40px;
+}
+
+/* CONTENEDOR DE CARDS */
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* TARJETA */
+.card {
+  background-color: #fff;
+  width: 260px;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER TARJETA */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGEN */
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* TÍTULO PRODUCTO */
+.card h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333131;
+}
+
+/* PRECIO */
+.precio {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333131;
+  margin-bottom: 15px;
+}
+
+/* BOTÓN */
+.card button {
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #d63384;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #b82d6f;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+}
+
