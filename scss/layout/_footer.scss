@@ -1,0 +1,45 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+
+.footer {
+  background-color: variables.$color-footer;
+  padding: 40px 20px;
+  text-align: center;
+
+  .newsletter {
+    margin-bottom: 30px;
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 36px;
+      color: variables.$color-primario-hover;
+      font-family: variables.$fuente-titulos;
+    }
+
+    input {
+      padding: 10px 12px;
+      width: 560px;
+      border: 1px solid variables.$color-footer;
+      border-radius: 4px;
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 500px;
+
+    a {
+      text-decoration: none;
+      color: variables.$color-primario-hover;
+      font-size: 16px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+  

@@ -1,0 +1,9 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+body {
+  font-family: variables.$fuente-principal;
+}
+
+.descripcionCards {
+  font-family: variables.$fuente-titulos;
+}

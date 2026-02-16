@@ -1,0 +1,37 @@
+.logo {
+    width: 200px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+// anidacion menu//
+
+.navbar-nav {
+    display: flex;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+    .nav-link {
+        text-decoration: none;
+        color: #760D46;
+        font-family: roboto, sans-serif;
+        font-size: 16px;
+        padding: 10px 15px;
+
+    }
+
+
+
+.ofertasContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

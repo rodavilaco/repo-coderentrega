@@ -1,0 +1,44 @@
+@use "./variables" as *;
+
+// Mixin: responsive mobile
+@mixin responsive-mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+// Mixin: responsive desktop
+@mixin responsive-desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+// Mixin: responsive tablet
+@mixin responsive-tablet {
+  @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop-1px) {
+    @content;
+  }
+}
+
+// Mixin: parametro con relacion directa con variable. Nos sirve para definir el design system.
+@mixin contenedor($ancho-max : $ancho-maximo) {
+  max-width: $ancho-max;
+  margin: 0 auto;
+  padding: 0 $padding-contenedor;
+}
+
+@mixin boton-base {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

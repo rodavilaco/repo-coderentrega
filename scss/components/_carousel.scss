@@ -1,0 +1,23 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+
+#banner img {
+  object-fit: cover;
+  height: 85vh;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: variables.$color-primario;
+  width: 30px;
+  height: 30px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: variables.$color-primario;
+}
+
+.carousel-indicators .active {
+  background-color: variables.$color-primario-hover;
+}
