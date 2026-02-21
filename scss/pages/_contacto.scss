@@ -1,0 +1,48 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+
+
+.contactSeccion {
+
+  .contactContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 130px;
+}
+
+    .tituloContact {
+    font-family: variables.$fuente-titulos;
+    color: variables.$color-texto-principal;
+    text-align: start;    
+  }
+  
+  .descripcionContact {
+    font-family: variables.$fuente-principal;
+    color: variables.$color-texto-secundario;
+    text-align: start;
+    padding-bottom: 30px;   
+  }
+
+  .formGroup {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  .btnEnviar {
+    padding: 12px 24px;
+    background-color: variables.$color-primario;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+} 

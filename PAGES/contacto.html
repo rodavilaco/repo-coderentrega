@@ -76,26 +76,42 @@
 
     </nav>
 </header>
-    <main class="mainContent"> <!-- contenido principal -->
-         <section class= "contactSeccion">
-             <h1 class="descripcionContact">Contáctanos</h1>
-                 <p class="colorRojo">Para contactarnos, por favor completa el siguiente formulario:</p>
-                     <div class="contactContainer"> 
-                        <form action="#" method="post">
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" required><br><br>
+    <main class="mainContent">
+  <section class="contactSeccion">
 
-                <label for="email">Correo Electrónico:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+    <div class="container contactContainer">
 
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+      <h1 class="tituloContact">Contáctanos</h1>
 
-                <input type="submit" value="Enviar">          
+      <p class="descripcionContact">
+        Para contactarnos, por favor completa el siguiente formulario:
+      </p>
 
-                     </div>
-         </section>
-    </main>
+      <form action="#" method="post">
+
+        <div class="formGroup">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="formGroup">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="formGroup">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="btnEnviar">Enviar</button>
+
+      </form>
+
+    </div>
+
+  </section>
+</main>
 
 <!--- PIE DE PAGINA --->    
     <footer class="footer">
