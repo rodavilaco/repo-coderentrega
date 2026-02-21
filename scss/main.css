@@ -235,13 +235,6 @@ h3 {
   margin-bottom: 20px;
 }
 
-.contactContainer {
-  display: flex;
-  padding: 60px 0px;
-  margin-top: 0px;
-  margin-bottom: 140px;
-}
-
 #banner img {
   object-fit: cover;
   height: 85vh;

@@ -76,14 +76,12 @@
 
     </nav>
 </header>
-    <main> <!-- contenido principal -->
-
-        <h1>Contacto</h1>
-
-
-        <p class="colorRojo">Para contactarnos, por favor completa el siguiente formulario:</p>
-        <div>
-            <form action="#" method="post">
+    <main class="mainContent"> <!-- contenido principal -->
+         <section class= "contactSeccion">
+             <h1 class="descripcionContact">Contáctanos</h1>
+                 <p class="colorRojo">Para contactarnos, por favor completa el siguiente formulario:</p>
+                     <div class="contactContainer"> 
+                        <form action="#" method="post">
                 <label for="nombre">Nombre:</label><br>
                 <input type="text" id="nombre" name="nombre" required><br><br>
 
@@ -93,20 +91,21 @@
                 <label for="mensaje">Mensaje:</label><br>
                 <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
 
-                <input type="submit" value="Enviar">
+                <input type="submit" value="Enviar">          
 
-        </div>
+                     </div>
+         </section>
     </main>
 
 <!--- PIE DE PAGINA --->    
-    <footer class="footer"> 
+    <footer class="footer">
 
         <div class="slider-slide"></div>
 
         <div class="newsletter">
-            <p class="suscripcion-newsletter">
+            <h2 class="suscripcion-newsletter">
                 ¡Suscribite ahora y no te pierdas nuestras ofertas!
-            </p>
+            </h2>
             <input type="email" placeholder="Dejanos tu email">
         </div>
 
