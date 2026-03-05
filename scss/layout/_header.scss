@@ -2,44 +2,86 @@
 @use "../utilities/mixins";
 
 
-
-@use "../utilities/variables" as *;
-
 #fondoHeader {
+  height: 100px;
+  min-height: 100px;
   background-color: white;
-  padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1)
+}
 
-  .container-fluid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+.navbar-brand {
+  padding-left: 10px;
+  padding-bottom: 30px;
+
+  .logo {
+    transform: scale(1.2);  /* Aumenta un 20% el tamaño original */
+    /* o */
+    transform: scale(0.8);  /* Reduce un 20% el tamaño original */
+
   }
 }
 
-.logo {
-  width: 200px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
+
 
 .navbar-nav {
   display: flex;
-  gap: 25px;
+  justify-content: center;
+  width: 100%;
 }
 
 .nav-link {
   text-decoration: none;
-  color: $color-primario;
-  font-size: 16px;
-  padding: 10px 15px;
+  color: variables.$color-primario;
+  font-weight: 450;
+
 
   &:hover {
-    color: $color-primario-hover;
+    color: variables.$color-primario-hover;
   }
 }
 
 .navbar-toggler:focus {
   box-shadow: none;
 }
+
+/* ICONOS HEADER PNG */
+.icono-png {
+    width: 18px;      /* Ajusta el tamaño según necesites */
+    height: 18px;
+    object-fit: contain;    
+}
+
+.icono-png:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Asegura que los iconos estén alineados verticalmente */
+.iconosHeader a {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+}
+
+@media (min-width: 99px) {
+    .navbar-brand {
+        margin-right: auto;
+    }
+    
+    .iconosHeader {
+        margin-left: 0 !important;
+    }
+}
+
+/* Ajuste para que el menú se muestre bien en desktop */
+@media (min-width: 992px) {  /* Breakpoint de lg de Bootstrap */
+    .navbar-nav {
+        gap: 1rem;  /* Espacio entre links */
+    }
+}
+
+
+
+
 

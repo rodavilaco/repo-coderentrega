@@ -2,9 +2,16 @@
 @use "../utilities/mixins";
 
 
+
+.carousel {
+  padding-top: 100px; 
+}
+
+
 #banner img {
   object-fit: cover;
   height: 85vh;
+  
 }
 
 .carousel-control-prev-icon,

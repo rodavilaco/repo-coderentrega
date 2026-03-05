@@ -2,44 +2,206 @@
 @use "../utilities/mixins";
 
 
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: variables.$fuente-principal;
+    line-height: 1.5;
+    color: variables.$color-texto-footer;
+}
+
+/* Footer Styles */
 .footer {
-  background-color: variables.$color-footer;
-  padding: 40px 20px;
-  text-align: center;
+    background-color: variables.$color-footer;
+    padding: 60px 20px 40px;
+    border-top: 1px solid #e9ecef;
+}
 
-  .newsletter {
-    margin-bottom: 30px;
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+}
 
-    h2 {
-      margin-bottom: 30px;
-      font-size: 36px;
-      color: variables.$color-primario-hover;
-      font-family: variables.$fuente-titulos;
-    }
+/* Columna 1: Logo y descripción */
+.footer-logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: variables.$color-texto-footer;
+    margin-bottom: 20px;
+}
 
-    input {
-      padding: 10px 12px;
-      width: 560px;
-      border: 1px solid variables.$color-footer;
-      border-radius: 4px;
-    }
-  }
+.footer-description {
+    color: variables.$color-texto-footer;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+}
 
-  .footer-links {
+.footer-email {
     display: flex;
-    justify-content: center;
-    gap: 500px;
+    align-items: center;
+    gap: 10px;
+    color: variables.$color-texto-footer;
+    font-size: 14px;
+}
 
-    a {
-      text-decoration: none;
-      color: variables.$color-primario-hover;
-      font-size: 16px;
+.footer-email i {
+    color: variables.$color-texto-footer;
+}
 
-      &:hover {
-        opacity: 0.8;
-      }
+.footer-email a {
+    color: variables.$color-texto-footer;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-email a:hover {
+    color: variables.$color-primario-hover;
+}
+
+/* Columnas de enlaces */
+.footer-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: variables.$color-texto-footer;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0%;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: variables.$color-texto-footer;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: variables.$color-primario-hover;
+}
+
+/* Columna Newsletter */
+.newsletter-text {
+    color: variables.$color-texto-footer;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    margin-bottom: 30px;
+}
+
+.newsletter-input {
+    display: flex;
+    border-bottom: 2px solid variables.$color-texto-footer;
+    padding-bottom: 5px;
+}
+
+.newsletter-input input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 8px 0;
+    font-size: 14px;
+    outline: none;
+}
+
+.newsletter-input input::placeholder {
+    color: variables.$color-texto-footer;
+}
+
+.newsletter-input button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: variables.$color-texto-footer;
+    transition: color 0.3s;
+}
+
+.newsletter-input button:hover {
+    color: variables.$color-primario-hover;
+}
+
+/* Redes Sociales */
+.social-links {
+    display: flex;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.social-link {
+    color: variables.$color-texto-footer;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: variables.$color-primario-hover;
+}
+
+/* Responsive Design */
+
+/* Tablet (menos de 1024px) */
+@media screen and (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
     }
-  }
+}
+
+/* Mobile (menos de 768px) */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 40px 20px 30px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-col {
+        text-align: left;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+
+    .newsletter-input {
+        max-width: 100%;
+    }
+}
+
+/* Mobile pequeño (menos de 480px) */
+@media screen and (max-width: 480px) {
+    .footer-container {
+        gap: 25px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-link {
+        font-size: 16px;
+    }
 }
 
   
